@@ -3,8 +3,8 @@ import './pagination.css';
 import { fetchAll } from '../Home/homeSlice';
 
 const Pagination = () => {
-  const total = useSelector((state) => state.home.data.total_pages);
-  const current = useSelector((state) => state.home.data.page);
+  const total = useSelector((state) => state.home?.data?.total_pages);
+  const current = useSelector((state) => state.home?.data?.page);
   const dispatch = useDispatch();
 
   const handleClick = (page) => {
@@ -18,6 +18,7 @@ const Pagination = () => {
         .fill(undefined)
         .map((item, index) => (
           <span
+            key={index}
             onClick={(_) => handleClick(index + 1)}
             className={
               index + 1 == current ? 'pagination__current' : ''
