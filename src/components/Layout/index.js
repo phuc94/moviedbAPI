@@ -4,6 +4,7 @@ import Footer from '../Footer';
 import Header from '../Header';
 import Home from '../Home';
 import SearchResult from '../SearchResult';
+import ToTop from '../ToTop';
 import './layout.css';
 
 const Layout = () => {
@@ -21,6 +22,7 @@ const Layout = () => {
           </Routes>
         </main>
         <Footer />
+        <ToTop />
       </BrowserRouter>
     </div>
   );
