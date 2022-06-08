@@ -3,10 +3,13 @@ import { fetchAllAPI } from './homeApi';
 
 const initialState = {};
 
-export const fetchAll = createAsyncThunk('home/fethAll', async () => {
-  const res = await fetchAllAPI();
-  return res;
-});
+export const fetchAll = createAsyncThunk(
+  'home/fethAll',
+  async (page) => {
+    const res = await fetchAllAPI(page);
+    return res;
+  }
+);
 
 export const homeSlice = createSlice({
   name: 'home',

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ItemList from '../ItemList';
 import Trending from '../Trending';
+import Pagination from '../Pagination';
 import { fetchAll } from './homeSlice';
 
 const Home = () => {
@@ -11,7 +12,7 @@ const Home = () => {
   const [itemList, setItemList] = useState([]);
 
   useEffect(() => {
-    dispatch(fetchAll());
+    dispatch(fetchAll(1));
   }, []);
 
   useEffect(() => {
@@ -32,6 +33,7 @@ const Home = () => {
         <>
           <Trending trending={trending} />
           <ItemList itemList={itemList} />
+          <Pagination />
         </>
       )}
     </div>
