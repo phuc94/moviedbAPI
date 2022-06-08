@@ -16,18 +16,14 @@ const Home = () => {
 
   useEffect(() => {
     if (home.data === undefined) return;
-    console.log(home.data);
-    setTrending(
-      (prev) =>
-        (prev = {
-          imgUrl: home.data.backdrop_path,
-          id: home.data.id,
-          description: home.data.description,
-          name: home.data.name,
-          runtime: home.data.runtime,
-        })
-    );
-    setItemList((prev) => (prev = home.data.results));
+    setTrending({
+      imgUrl: home.data.backdrop_path,
+      id: home.data.id,
+      description: home.data.description,
+      name: home.data.name,
+      runtime: home.data.runtime,
+    });
+    setItemList(home.data.results);
   }, [home]);
 
   return (

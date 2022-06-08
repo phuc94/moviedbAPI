@@ -1,4 +1,7 @@
 .search {
+  position: relative;
+}
+.search__group {
   background-color: var(--white);
   border-radius: 1rem;
   padding-left: 1rem;
@@ -8,12 +11,13 @@
 .search__input {
   font-size: 1rem;
   border: transparent solid 2px;
+  width: 300px;
 }
 
-.search__btn {
-  font-size: 1rem;
+.search__options {
   border: none;
-  padding: 0.6rem 1rem;
+  outline: none;
   background-color: rgb(187, 238, 153);
-  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1rem;
 }
