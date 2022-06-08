@@ -1,0 +1,6 @@
+@import url('variable.css');
+@import url('reset.css');
+
+:root {
+  font-size: 16px;
+}

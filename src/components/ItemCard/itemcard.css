@@ -1,0 +1,65 @@
+.itemCard {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.itemCard__backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+.itemCard:hover .itemCard__backdrop {
+  transform: scale(1.1);
+}
+
+.itemCard__info {
+  color: var(--white);
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  z-index: 2;
+}
+.itemCard__info::before {
+  content: '';
+  background-color: var(--dark-blue);
+  position: absolute;
+  opacity: 0.75;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.itemCard__title {
+  font-size: 1.7rem;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.itemCard__overview {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.itemCard__description {
+  position: relative;
+  transition: all 0.3s ease;
+  visibility: hidden;
+  height: 0;
+  max-height: 0;
+  z-index: 3;
+}
+.itemCard:hover .itemCard__description {
+  height: 350px;
+  max-height: 350px;
+  visibility: visible;
+}

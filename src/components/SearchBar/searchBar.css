@@ -1,0 +1,19 @@
+.search {
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding-left: 1rem;
+  overflow: hidden;
+}
+
+.search__input {
+  font-size: 1rem;
+  border: transparent solid 2px;
+}
+
+.search__btn {
+  font-size: 1rem;
+  border: none;
+  padding: 0.6rem 1rem;
+  background-color: rgb(187, 238, 153);
+  cursor: pointer;
+}
