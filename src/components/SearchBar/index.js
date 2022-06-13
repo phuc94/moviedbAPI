@@ -95,6 +95,7 @@ const SearchBar = () => {
         isShow={isShow}
         setIsShow={setIsShow}
         resultList={resultList}
+        setKeyword={setKeyword}
       />
     </form>
   );

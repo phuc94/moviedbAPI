@@ -7,6 +7,7 @@ const SearchResult = (props) => {
   const handleOnClick = (id) => {
     navigate(`/movie/${id}`);
     props.setIsShow(false);
+    props.setKeyword('');
   };
 
   return (
