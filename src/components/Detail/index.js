@@ -12,6 +12,7 @@ const Detail = () => {
     <div className='detail'>
       <div className='detail__backdrop'>
         <img
+          loading='lazy'
           src={`https://image.tmdb.org/t/p/original${data.backdrop_path}`}
           alt=''
         />
@@ -19,6 +20,7 @@ const Detail = () => {
       <div className='detail__info'>
         <div className='detail__poster'>
           <img
+            loading='lazy'
             src={`https://image.tmdb.org/t/p/original${data.poster_path}`}
             alt=''
           />

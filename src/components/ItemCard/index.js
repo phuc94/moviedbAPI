@@ -11,6 +11,7 @@ const ItemCard = ({ data }) => {
   return (
     <div className='itemCard' onClick={handleClick}>
       <img
+        loading='lazy'
         className='itemCard__backdrop'
         src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`}
         alt=''

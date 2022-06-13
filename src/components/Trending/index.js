@@ -4,6 +4,7 @@ const Trending = ({ trending }) => {
   return (
     <div className='trending'>
       <img
+        loading='lazy'
         className='trending__backdrop'
         src={`https://image.tmdb.org/t/p/original${trending.imgUrl}`}
         alt=''

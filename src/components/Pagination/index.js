@@ -9,6 +9,7 @@ const Pagination = () => {
 
   const handleClick = (page) => {
     if (page == current) return;
+    document.getElementById('new-release').scrollIntoView();
     dispatch(fetchAll(page));
   };
 

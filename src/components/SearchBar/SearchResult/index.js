@@ -27,6 +27,7 @@ const SearchResult = (props) => {
             >
               <div className='searchResult__poster'>
                 <img
+                  loading='lazy'
                   src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                   alt=''
                 />
